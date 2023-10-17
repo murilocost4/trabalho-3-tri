@@ -13,4 +13,20 @@
         }
         return $conexao;
     }
+function mostrarProdutosComImagens(object $conexao):void{
+$comandoSQL = "select * from pdorutos";
+$retornoBanco = $conexao -> prepare($comandoSQL);
+$retornoBanco->execute();
+$registros = $retornoBanco->fetchall(PDO::FETCH_OBJ);
+foreach($registros as $linha){
+    if($linha-> imagem <>null){
+        echo"<figure>";
+         echo'<img smc="data:;base64, "'.base64_encode($linha->imagem).'"width=200" height=""/>';
+
+        echo"<figure>";
+}
+
+}
+}
+
 ?>
