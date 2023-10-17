@@ -13,18 +13,26 @@
         }
         return $conexao;
     }
-function mostrarProdutosComImagens(object $conexao):void{
-$comandoSQL = "select * from pdorutos";
-$retornoBanco = $conexao -> prepare($comandoSQL);
-$retornoBanco->execute();
-$registros = $retornoBanco->fetchall(PDO::FETCH_OBJ);
-foreach($registros as $linha){
-    if($linha-> imagem <>null){
-        echo"<figure>";
-         echo'<img smc="data:;base64, "'.base64_encode($linha->imagem).'"width=200" height=""/>';
-
-        echo"<figure>";
-}
+    function mostrarProdutosComImagens(object $conexao):void{
+    $comandoSQL = "select * from pdorutos";
+    $retornoBanco = $conexao -> prepare($comandoSQL);
+    $retornoBanco->execute();
+    $registros = $retornoBanco->fetchall(PDO::FETCH_OBJ);
+    foreach($registros as $linha){
+        if($linha-> imagem <>null){
+            echo"<figure>";
+             echo'<img smc="data:;base64, "'.base64_encode($linha->imagem).'"width=200" height=""/>';
+    
+            echo"<figure>";
+    }
+    function InserirProduto($auxConexao, $nome, $arquivo, $data): bool {
+        $comandoSQL = "insert into produtos (nome, imagem. data) values (?, ?, ?)";
+        $dados = $conexao->prepare($comandoSQL);
+        $dados->bindParam(1, $nome);
+        $dados->bindParam(2, $arquivo);
+        $dados->bindParam(3, $data);
+        
+    }
 
 }
 }
