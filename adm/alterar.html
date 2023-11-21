@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+    <header>
+        <h1>Nome da empresa</h1>
+        <p id="adm-id">Administrador</p>
+    </header>
+    <div class="content">
+        <h1>Formulário de Inserção de Produto</h1>
+    <form action="alterar.php" method="post" enctype="multipart/form-data">
+        <label for="idproduto">ID</label>
+        <input type="text" name="idproduto" id="idproduto">
+
+        <label for="nome">Nome do Produto:</label>
+        <input type="text" name="nome" id="nome" required><br><br>
+
+        <label for="descricao">Descricao do Produto:</label>
+        <input type="text" name="descricao" id="descricao" required><br><br>
+
+        <label for="imagem">Imagem do Produto:</label>
+        <input type="file" name="imagem" id="imagem" accept="image/*" required><br><br>
+
+        <label for="data_insercao">Data de Inserção:</label>
+        <input type="date" name="data_insercao" id="data_insercao" required><br><br>
+
+        <input type="submit" value="Inserir Produto">
+        <br>
+        <a href="index-adm.html">Voltar para a página inicial</a>
+    </form>
+    </div>
+
+    <footer>
+        Nome da empresa - desenvolvido por: Murilo e Gustavo
+    </footer>
+    </div>
+</body>
+</html>
