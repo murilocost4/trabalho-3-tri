@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="divnavegacao">
+            <nav class="navegacao">
+                <a class="linknav" href="produtos.php"><button class="navbtn">Produtos</button></a>
+                <a class="linknav" href="fale-conosco.html"><button class="navbtn"  id="navbtnativo">Fale Conosco</button></a>
+            </nav>
+        </div>
+        <div class="divadm">
+            <p>Usuário</p>   
+        </div>
+    </header>
+    <div class="content" id="contentlistar">
+        <div class="inserirfaleconoscodiv">
+            <h3>Fale Conosco</h3>
+            <form class="formularioinserir"action="inserir-fale-conosco.php" method="post">
+                <label for="nome">Nome</label><br>
+                <input type="text" name="nome" id="nome" required><br><br>
+                <p class="labelinferior">seu nome</p>
+
+                <label for="email">Email</label><br>
+                <input type="text" name="email" id="email" required><br><br>
+                <p class="labelinferior">nome@exemplo.com</p>
+
+                <label for="duvida">Dúvida</label><br>
+                <input type="text" name="duvida" id="duvida" required><br><br>
+                <p class="labelinferior">Dúvida</p>
+
+                <input id="btninserir" type="submit" value="Enviar">
+                <br>
+            </form>
+            <br>
+        </div>            
+
+    <footer>
+        <p>LolSkins - desenvolvido por:<br>Murilo e Gustavo</p>
+    </footer>
+    </div>
+</body>
+</html>
+
